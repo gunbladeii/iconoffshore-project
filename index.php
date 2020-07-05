@@ -47,7 +47,7 @@ session_start();
                 $_SESSION['MM_Username'] = $res['username'];
                 $_SESSION['role'] = $res["role"];
                 $_SESSION['password'] = $res["password"];
-                header('Location:adminAFM/index.php');
+                header('Location:dashboard.php');
             }
             else if($res["role"] == "regional admin")
             {
