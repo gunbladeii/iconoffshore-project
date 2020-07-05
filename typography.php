@@ -47,49 +47,49 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item  ">
-            <a class="nav-link" href="dashboard.html">
+            <a class="nav-link" href="dashboard.php">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="user.html">
+            <a class="nav-link" href="user.php">
               <i class="material-icons">person</i>
               <p>User Profile</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="tables.html">
+            <a class="nav-link" href="tables.php">
               <i class="material-icons">content_paste</i>
               <p>Table List</p>
             </a>
           </li>
           <li class="nav-item active ">
-            <a class="nav-link" href="typography.html">
+            <a class="nav-link" href="typography.php">
               <i class="material-icons">library_books</i>
               <p>Typography</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="icons.html">
+            <a class="nav-link" href="icons.php">
               <i class="material-icons">bubble_chart</i>
               <p>Icons</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="map.html">
+            <a class="nav-link" href="map.php">
               <i class="material-icons">location_ons</i>
               <p>Maps</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="notifications.html">
+            <a class="nav-link" href="notifications.php">
               <i class="material-icons">notifications</i>
               <p>Notifications</p>
             </a>
           </li>
           <!-- <li class="nav-item active-pro ">
-                <a class="nav-link" href="upgrade.html">
+                <a class="nav-link" href="upgrade.php">
                     <i class="material-icons">unarchive</i>
                     <p>Upgrade to PRO</p>
                 </a>
@@ -346,7 +346,7 @@
                 </a>
             </li> -->
         <li class="button-container">
-          <a href="https://demos.creative-tim.com/material-dashboard-dark/docs/2.0/getting-started/introduction.html" target="_blank" class="btn btn-default btn-block">
+          <a href="https://demos.creative-tim.com/material-dashboard-dark/docs/2.0/getting-started/introduction.php" target="_blank" class="btn btn-default btn-block">
             View Documentation
           </a>
         </li>
