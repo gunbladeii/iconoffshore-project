@@ -5,7 +5,7 @@
       {
           if($_SESSION['role'] == "administrator")
             {
-                header('Location:adminAFM/index.php');
+                header('Location:dashboard.php');
             }
             else if($_SESSION['role'] == "regional admin")
             {
