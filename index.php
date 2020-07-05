@@ -143,7 +143,7 @@ session_start();
 					</div>
 
 					<div class="wrap-input100">
-						<div class="col-md-3">
+						<div class="col-md-12">
 				              <input type="checkbox" id="remember">
 				              <label for="remember">
 				                Remember Me
