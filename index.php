@@ -143,10 +143,12 @@ session_start();
 					</div>
 
 					<div class="wrap-input100">
-			              <input type="checkbox" id="remember">
-			              <label for="remember">
-			                Remember Me
-			              </label>
+						<div class="col-md-3">
+				              <input type="checkbox" id="remember">
+				              <label for="remember">
+				                Remember Me
+				              </label>
+			             </div>
 			        </div>
 
 					<div class="container-login100-form-btn m-t-32">
