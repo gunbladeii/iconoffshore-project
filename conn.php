@@ -2,7 +2,7 @@
 $username = "iconvess_iconvess";
 $password = "Sh@ti5620";
 $hostname = "localhost";
-$db_name = "iconvess_iconvess";
+$db_name = "iconvess_icon";
 
 //connection to the database
 $mysqli = new mysqli($hostname, $username, $password, $db_name);
