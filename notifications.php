@@ -4,7 +4,7 @@
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-dark
-* Copyright 2019 Icon Offshore (http://www.creative-tim.com)
+* Copyright 2019 Icon Offshore (#)
 
 * Coded by www.creative-tim.com
 
@@ -41,7 +41,7 @@
 
         Tip 2: you can also add an image using data-image tag
     -->
-      <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
+      <div class="logo"><a href="#" class="simple-text logo-normal">
           <img src="assets/img/apple-icon.png" class="img-thumbnail img-fluid">
         </a></div>
       <div class="sidebar-wrapper">

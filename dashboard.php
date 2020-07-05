@@ -3,7 +3,7 @@
 * Material Dashboard Dark Edition - v2.1.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-dashboard-dark
+* Product Page: #/product/material-dashboard-dark
 * Copyright 2019 Icon Offshore (http://www.creative-tim.com)
 
 * Coded by www.creative-tim.com
@@ -578,7 +578,7 @@
           <nav class="float-left">
             <ul>
               <li>
-                <a href="https://www.creative-tim.com">
+                <a href="#">
                   Icon Offshore
                 </a>
               </li>
@@ -593,7 +593,7 @@
                 </a>
               </li>
               <li>
-                <a href="https://www.creative-tim.com/license">
+                <a href="#/license">
                   Licenses
                 </a>
               </li>
@@ -601,7 +601,7 @@
           </nav>
           <div class="copyright float-right" id="date">
             , made with <i class="material-icons">favorite</i> by
-            <a href="https://www.creative-tim.com" target="_blank">Icon Offshore</a> for a better web.
+            <a href="#" target="_blank">Icon Offshore</a> for a better web.
           </div>
         </div>
       </footer>
@@ -654,7 +654,7 @@
         </li>
         <!-- <li class="header-title">Want more components?</li>
             <li class="button-container">
-                <a href="https://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-warning btn-block">
+                <a href="#/product/material-dashboard-pro" target="_blank" class="btn btn-warning btn-block">
                   Get the pro version
                 </a>
             </li> -->
