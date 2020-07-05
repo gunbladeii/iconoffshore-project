@@ -17,8 +17,8 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
     Material Dashboard Dark Edition by Creative Tim
@@ -28,14 +28,14 @@
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
-  <link href="../assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
+  <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <link href="assets/demo/demo.css" rel="stylesheet" />
 </head>
 
 <body class="dark-edition">
   <div class="wrapper ">
-    <div class="sidebar" data-color="purple" data-background-color="black" data-image="../assets/img/sidebar-2.jpg">
+    <div class="sidebar" data-color="purple" data-background-color="black" data-image="assets/img/sidebar-2.jpg">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
@@ -47,49 +47,49 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item  ">
-            <a class="nav-link" href="./dashboard.html">
+            <a class="nav-link" href="dashboard.html">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./user.html">
+            <a class="nav-link" href="user.html">
               <i class="material-icons">person</i>
               <p>User Profile</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./tables.html">
+            <a class="nav-link" href="tables.html">
               <i class="material-icons">content_paste</i>
               <p>Table List</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./typography.html">
+            <a class="nav-link" href="typography.html">
               <i class="material-icons">library_books</i>
               <p>Typography</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./icons.html">
+            <a class="nav-link" href="icons.html">
               <i class="material-icons">bubble_chart</i>
               <p>Icons</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./map.html">
+            <a class="nav-link" href="map.html">
               <i class="material-icons">location_ons</i>
               <p>Maps</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./notifications.html">
+          <li class="nav-item active ">
+            <a class="nav-link" href="notifications.html">
               <i class="material-icons">notifications</i>
               <p>Notifications</p>
             </a>
           </li>
-          <!-- <li class="nav-item active-pro active ">
-                <a class="nav-link" href="./upgrade.html">
+          <!-- <li class="nav-item active-pro ">
+                <a class="nav-link" href="upgrade.html">
                     <i class="material-icons">unarchive</i>
                     <p>Upgrade to PRO</p>
                 </a>
@@ -102,7 +102,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:void(0)">Upgrade to PRO</a>
+            <a class="navbar-brand" href="javascript:void(0)">Notifications</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
@@ -160,75 +160,120 @@
       <!-- End Navbar -->
       <div class="content">
         <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-8 ml-auto mr-auto">
-              <div class="card">
-                <div class="card-header card-header-primary">
-                  <h4 class="card-title">Material Dashboard PRO</h4>
-                  <p class="card-category">Are you looking for more components? Please check our Premium Version of Material Dashboard.</p>
+          <div class="card">
+            <div class="card-header card-header-primary">
+              <h4 class="card-title">Notifications</h4>
+              <p class="card-category">Handcrafted by our friend
+                <a target="_blank" href="https://github.com/mouse0270">Robert McIntosh</a>. Please checkout the
+                <a href="http://bootstrap-notify.remabledesigns.com/" target="_blank">full documentation.</a>
+              </p>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <h4 class="card-title">Notifications Style</h4>
+                  <div class="alert alert-info">
+                    <span>This is a plain notification</span>
+                  </div>
+                  <div class="alert alert-info">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <i class="material-icons">close</i>
+                    </button>
+                    <span>This is a notification with close button.</span>
+                  </div>
+                  <div class="alert alert-info alert-with-icon" data-notify="container">
+                    <i class="material-icons" data-notify="icon">add_alert</i>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <i class="material-icons">close</i>
+                    </button>
+                    <span data-notify="message">This is a notification with close button and icon.</span>
+                  </div>
+                  <div class="alert alert-info alert-with-icon" data-notify="container">
+                    <i class="material-icons" data-notify="icon">add_alert</i>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <i class="material-icons">close</i>
+                    </button>
+                    <span data-notify="message">This is a notification with close button and icon and have many lines. You can see that the icon and the close button are always vertically aligned. This is a beautiful notification. So you don't have to worry about the style.</span>
+                  </div>
                 </div>
-                <div class="card-body">
-                  <div class="table-responsive table-upgrade">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th></th>
-                          <th class="text-center">Free</th>
-                          <th class="text-center">PRO</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Components</td>
-                          <td class="text-center">60</td>
-                          <td class="text-center">200</td>
-                        </tr>
-                        <tr>
-                          <td>Plugins</td>
-                          <td class="text-center">2</td>
-                          <td class="text-center">15</td>
-                        </tr>
-                        <tr>
-                          <td>Example Pages</td>
-                          <td class="text-center">3</td>
-                          <td class="text-center">27</td>
-                        </tr>
-                        <tr>
-                          <td>Login, Register, Pricing, Lock Pages</td>
-                          <td class="text-center"><i class="fa fa-times text-danger"></i></td>
-                          <td class="text-center"><i class="fa fa-check text-success"></i></td>
-                        </tr>
-                        <tr>
-                          <td>DataTables, VectorMap, SweetAlert, Wizard, jQueryValidation, FullCalendar etc...</td>
-                          <td class="text-center"><i class="fa fa-times text-danger"></i></td>
-                          <td class="text-center"><i class="fa fa-check text-success"></i></td>
-                        </tr>
-                        <tr>
-                          <td>Mini Sidebar</td>
-                          <td class="text-center"><i class="fa fa-times text-danger"></i></td>
-                          <td class="text-center"><i class="fa fa-check text-success"></i></td>
-                        </tr>
-                        <tr>
-                          <td>Premium Support</td>
-                          <td class="text-center"><i class="fa fa-times text-danger"></i></td>
-                          <td class="text-center"><i class="fa fa-check text-success"></i></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td class="text-center">Free</td>
-                          <td class="text-center">Just $49</td>
-                        </tr>
-                        <tr>
-                          <td class="text-center"></td>
-                          <td class="text-center">
-                            <a href="#" class="btn btn-round btn-fill btn-default disabled">Current Version</a>
-                          </td>
-                          <td class="text-center">
-                            <a target="_blank" href="http://www.creative-tim.com/product/material-dashboard-pro/?ref=md-free-upgrade-live" class="btn btn-round btn-fill btn-info">Upgrade to PRO</a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                <div class="col-md-6">
+                  <h4 class="card-title">Notification states</h4>
+                  <div class="alert alert-info">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <i class="material-icons">close</i>
+                    </button>
+                    <span>
+                      <b> Info - </b> This is a regular notification made with ".alert-info"</span>
+                  </div>
+                  <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <i class="material-icons">close</i>
+                    </button>
+                    <span>
+                      <b> Success - </b> This is a regular notification made with ".alert-success"</span>
+                  </div>
+                  <div class="alert alert-warning">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <i class="material-icons">close</i>
+                    </button>
+                    <span>
+                      <b> Warning - </b> This is a regular notification made with ".alert-warning"</span>
+                  </div>
+                  <div class="alert alert-danger">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <i class="material-icons">close</i>
+                    </button>
+                    <span>
+                      <b> Danger - </b> This is a regular notification made with ".alert-danger"</span>
+                  </div>
+                  <div class="alert alert-primary">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <i class="material-icons">close</i>
+                    </button>
+                    <span>
+                      <b> Primary - </b> This is a regular notification made with ".alert-primary"</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="places-buttons">
+                <div class="row">
+                  <div class="col-md-6 ml-auto mr-auto text-center">
+                    <h4 class="card-title">
+                      Notifications Places
+                      <p class="category">Click to view notifications</p>
+                    </h4>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-8 col-md-10 ml-auto mr-auto">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <button class="btn btn-primary btn-block" onclick="md.showNotification('top','left')">Top Left</button>
+                      </div>
+                      <div class="col-md-4">
+                        <button class="btn btn-primary btn-block" onclick="md.showNotification('top','center')">Top Center</button>
+                      </div>
+                      <div class="col-md-4">
+                        <button class="btn btn-primary btn-block" onclick="md.showNotification('top','right')">Top Right</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-8 col-md-10 ml-auto mr-auto">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <button class="btn btn-primary btn-block" onclick="md.showNotification('bottom','left')">Bottom Left</button>
+                      </div>
+                      <div class="col-md-4">
+                        <button class="btn btn-primary btn-block" onclick="md.showNotification('bottom','center')">Bottom Center</button>
+                      </div>
+                      <div class="col-md-4">
+                        <button class="btn btn-primary btn-block" onclick="md.showNotification('bottom','right')">Bottom Right</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -297,22 +342,22 @@
         <li class="header-title">Images</li>
         <li>
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-1.jpg" alt="">
+            <img src="assets/img/sidebar-1.jpg" alt="">
           </a>
         </li>
         <li class="active">
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-2.jpg" alt="">
+            <img src="assets/img/sidebar-2.jpg" alt="">
           </a>
         </li>
         <li>
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-3.jpg" alt="">
+            <img src="assets/img/sidebar-3.jpg" alt="">
           </a>
         </li>
         <li>
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-4.jpg" alt="">
+            <img src="assets/img/sidebar-4.jpg" alt="">
           </a>
         </li>
         <li class="button-container">
@@ -343,23 +388,23 @@
     </div>
   </div>
   <!--   Core JS Files   -->
-  <script src="../assets/js/core/jquery.min.js"></script>
-  <script src="../assets/js/core/popper.min.js"></script>
-  <script src="../assets/js/core/bootstrap-material-design.min.js"></script>
+  <script src="assets/js/core/jquery.min.js"></script>
+  <script src="assets/js/core/popper.min.js"></script>
+  <script src="assets/js/core/bootstrap-material-design.min.js"></script>
   <script src="https://unpkg.com/default-passive-events"></script>
-  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!--  Google Maps Plugin    -->
   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <!-- Chartist JS -->
-  <script src="../assets/js/plugins/chartist.min.js"></script>
+  <script src="assets/js/plugins/chartist.min.js"></script>
   <!--  Notifications Plugin    -->
-  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  <script src="assets/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../assets/js/material-dashboard.js?v=2.1.0"></script>
+  <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-  <script src="../assets/demo/demo.js"></script>
+  <script src="assets/demo/demo.js"></script>
   <script>
     $(document).ready(function() {
       $().ready(function() {
