@@ -1,3 +1,97 @@
+<?php require('Connection/iBerkat.php');?>
+<?php
+
+session_start();
+  
+      $user = $_POST["username"];
+      $pass = $_POST["password"];
+      
+      $login = $mysqli->query("SELECT * FROM login WHERE username = '$user' AND password='$pass'");
+      $res = mysqli_fetch_assoc($login);
+     
+      if ($_SESSION['MM_Username'] || $_COOKIE["user"])
+     {
+         header("Location:autologin.php");
+         exit;
+     }
+     /*autologin end*/ 
+      if(isset($_POST["submit"]))
+     {
+ 
+            if($res)
+            {
+                if(!empty($_POST["remember"]))
+                {
+                    setcookie ("user", $user, time() + (86400 * 30 * 30), "/");
+                    setcookie ("pass", $pass, time() + (86400 * 30 * 30), "/");
+                }
+                else
+                {
+                    if(isset($_COOKIE["user"]))
+                    {
+                        setcookie ("user", "");
+                    }
+                    if(isset($_COOKIE["pass"]))
+                    {
+                        setcookie ("pass", "");
+                    }
+                }
+            }
+            else
+            {
+                $msg = "Invalid Username or Password";
+            }
+        
+            if($res["role"] == "administrator")
+            {
+                $_SESSION['MM_Username'] = $res['username'];
+                $_SESSION['role'] = $res["role"];
+                $_SESSION['password'] = $res["password"];
+                header('Location:adminAFM/index.php');
+            }
+            else if($res["role"] == "regional admin")
+            {
+            $_SESSION['MM_Username'] = $res['username'];
+            $_SESSION['role'] = $res["role"];
+            $_SESSION['password'] = $res["password"];
+            header('Location:adminAFM/regional_admin.php');
+            }
+            else if($res["role"] == "rider")
+            {
+            $_SESSION['MM_Username'] = $res['username'];
+            $_SESSION['role'] = $res["role"];
+            $_SESSION['password'] = $res["password"];
+            header('Location:riderAFM/profileRider.php');
+            }
+            else if($res["role"] == "ss")
+            {
+            $_SESSION['MM_Username'] = $res['username'];
+            $_SESSION['role'] = $res["role"];
+            $_SESSION['password'] = $res["password"];
+            header('Location:supervisorAFM/index.php');
+            }
+            else if($res["role"] == "Senior Courier")
+            {
+            $_SESSION['MM_Username'] = $res['username'];
+            $_SESSION['role'] = $res["role"];
+            $_SESSION['password'] = $res["password"];
+            header('Location:supervisorAFM/index.php');
+            }
+            else if($res["role"] == "dump")
+            {
+            $_SESSION['MM_Username'] = $res['username'];
+            $_SESSION['role'] = $res["role"];
+            $_SESSION['password'] = $res["password"];
+            header('Location:fetchUser.php');
+            }
+            else if($res["role"] != "administrator" && $res["role"] != "ss" && $res["role"] != "rider" && $res["role"] != "dump")
+            {
+            header('Location:index.php?message=fail');
+            }
+                   
+     }
+     
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +130,7 @@
 					<img src="assets/img/apple-icon.png" class="img-thumbnail img-fluid">
 					Account Login
 				</span>
-				<form class="login100-form validate-form p-b-33 p-t-5">
+				<form action="<?php echo $loginFormAction; ?>" role="form" method="POST" name="prosesLogin" class="login100-form validate-form p-b-33 p-t-5">
 
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
 						<input class="input100" type="text" name="username" placeholder="User name">
@@ -48,10 +142,18 @@
 						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
 					</div>
 
+					<div class="row">
+			          <div class="col-8">
+			            <div class="icheck-primary">
+			              <input type="checkbox" id="remember">
+			              <label for="remember">
+			                Remember Me
+			              </label>
+			            </div>
+			         </div>
+
 					<div class="container-login100-form-btn m-t-32">
-						<button class="login100-form-btn">
-							Login
-						</button>
+						<input type="submit" name="submit" class="btn btn-primary btn-block btn-flat" value="Log In">
 					</div>
 
 				</form>

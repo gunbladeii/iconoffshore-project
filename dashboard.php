@@ -1,3 +1,12 @@
+<?php require('conn.php'); ?>
+<?php
+session_start();
+if ($_SESSION['role'] != 'administrator')
+{
+      header('Location:index.php');
+}
+
+?>
 <!--
 =========================================================
 * Material Dashboard Dark Edition - v2.1.0
