@@ -579,7 +579,7 @@
             <ul>
               <li>
                 <a href="https://www.creative-tim.com">
-                  Creative Tim
+                  Icon Offshore
                 </a>
               </li>
               <li>
