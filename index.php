@@ -42,7 +42,7 @@
         Tip 2: you can also add an image using data-image tag
     -->
       <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Icon Offshore
+          <img src="assets/img/apple-icon.png" class="img-thumbnail img-fluid">
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
