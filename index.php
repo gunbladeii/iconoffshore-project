@@ -128,7 +128,7 @@ session_start();
 			<div class="wrap-login100 p-t-30 p-b-50">
 				<span class="login100-form-title p-b-41">
 					<img src="assets/img/apple-icon.png" class="img-thumbnail img-fluid">
-					Account Login
+					<span class="badge badge-secondary">Account Login</span>
 				</span>
 				<form action="<?php echo $loginFormAction; ?>" role="form" method="POST" name="prosesLogin" class="login100-form validate-form p-b-33 p-t-5">
 
