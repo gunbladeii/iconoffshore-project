@@ -66,7 +66,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
       <div class="logo"><a href="https://iconvessel.com/icon" class="simple-text logo-normal">
           <img src="assets/img/apple-icon.png" class="img-thumbnail img-fluid">
         </a></div>
-        <span class="badge badge-success"><?php echo $row_Recordset['username'];?></span>
+        <span class="badge badge-success"><?php echo ucfirst($row_Recordset['username']);?></span>
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
