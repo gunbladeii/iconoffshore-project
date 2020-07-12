@@ -170,19 +170,13 @@
                 <div class="card-body">
                   <form>
                     <div class="row">
-                      <div class="col-md-5">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Company (disabled)</label>
-                          <input type="text" class="form-control" disabled>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
+                      <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Username</label>
                           <input type="text" class="form-control">
                         </div>
                       </div>
-                      <div class="col-md-4">
+                      <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Email address</label>
                           <input type="email" class="form-control">
