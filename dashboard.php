@@ -6,6 +6,19 @@ if ($_SESSION['role'] != 'administrator')
       header('Location:index.php');
 }
 
+date_default_timezone_set("asia/kuala_lumpur");
+$date = date('d-F-Y');
+$datePHP = date('Y-m-d');
+
+$colname_Recordset = "-1";
+if (isset($_SESSION['MM_Username'])) {
+  $colname_Recordset = $_SESSION['MM_Username'];
+}
+
+$Recordset = $mysqli->query("SELECT * FROM login WHERE username = '$colname_Recordset'");
+$row_Recordset = mysqli_fetch_assoc($Recordset);
+$totalRows_Recordset = mysqli_num_rows($Recordset);
+
 ?>
 <!--
 =========================================================
@@ -13,7 +26,7 @@ if ($_SESSION['role'] != 'administrator')
 =========================================================
 
 * Product Page: #/product/material-dashboard-dark
-* Copyright 2019 Icon Offshore (http://www.creative-tim.com)
+* Copyright 2019 Icon Offshore (https://iconvessel.com/icon)
 
 * Coded by www.creative-tim.com
 
@@ -50,9 +63,10 @@ if ($_SESSION['role'] != 'administrator')
 
         Tip 2: you can also add an image using data-image tag
     -->
-      <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
+      <div class="logo"><a href="https://iconvessel.com/icon" class="simple-text logo-normal">
           <img src="assets/img/apple-icon.png" class="img-thumbnail img-fluid">
         </a></div>
+        <span class="badge badge-azure"><?php echo $row_Recordset['username'];?></span>
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
