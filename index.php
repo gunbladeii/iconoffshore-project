@@ -142,10 +142,6 @@ session_start();
 						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
 					</div>
 
-					<div class="wrap-input100">
-				              <input class="input100" type="checkbox" id="remember">
-			        </div>
-
 					<div class="container-login100-form-btn m-t-32">
 						<input type="submit" name="submit" class="btn btn-primary btn-block btn-flat" value="Log In">
 					</div>
