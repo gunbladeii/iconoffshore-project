@@ -207,7 +207,7 @@
                               </div>
                           </div>
                           <div class="col-md-1">
-                              <i class="material-icons" onclick="togglePassword()">toggle_off</i>
+                              <input type="checkbox" onclick="togglePassword()" id="another-basic-switch" class="mdc-switch__native-control" role="switch" aria-checked="true" checked>
                           </div>
                         </div>
                       </div>
