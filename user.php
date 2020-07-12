@@ -198,14 +198,20 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-md-12">
+                      <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Password</label>
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" id="txtPassword">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Confirm Password</label>
+                          <input type="text" class="form-control" id="txtConfirmPassword">
                         </div>
                       </div>
                     </div>
-                    <button type="submit" class="btn btn-primary pull-right">Register</button>
+                    <button type="submit" class="btn btn-primary pull-right" onclick="return Validate()">Register</button>
                     <div class="clearfix"></div>
                   </form>
                 </div>
@@ -247,6 +253,17 @@
           </div>
         </div>
       </footer>
+      <script type="text/javascript">
+          function Validate() {
+              var password = document.getElementById("txtPassword").value;
+              var confirmPassword = document.getElementById("txtConfirmPassword").value;
+              if (password != confirmPassword) {
+                  alert("Passwords do not match.");
+                  return false;
+              }
+              return true;
+          }
+      </script>
       <script>
         const x = new Date().getFullYear();
         let date = document.getElementById('date');
