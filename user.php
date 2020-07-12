@@ -32,10 +32,10 @@ $email = $_POST['email'];
 $username = $_POST['username'];
 $password = $_POST['password'];
 $role = $_POST['role'];
+$a = 1;
 
 if (isset($_POST['submit'])) {
       $mysqli->query("INSERT INTO `login` (`name`, `email`, `username`, `password`, `role`) VALUES ('$name', '$email', '$username', '$password', '$role')");
-      
       header("location:user.php");
     }
 
@@ -293,17 +293,16 @@ if (isset($_POST['submit'])) {
           </div>
           <div class="row">
             <div class="col-md-12">
+                <?php if ($totalRows_loginD > 0) { ?>
                   <table id="example1" class="table table-hover table-responsive-xl">
                     <thead class="table-info">
                     <tr style="text-align:left">
                       <th scope="col">No</th></th>
                       <th scope="col">Name</th></th>
-                      <th scope="col">IC Number</th>
-                      <th scope="col">Emel/Username</th>
+                      <th scope="col">Emailr</th>
+                      <th scope="col">Username</th>
                       <th scope="col">Password</th>
                       <th scope="col">Role</th>
-                      <th scope="col">Station</th>
-                      <th scope="col">Code</th>
                       <th scope="col">Action</th>
                     </tr>
                     </thead>
@@ -311,20 +310,20 @@ if (isset($_POST['submit'])) {
                     <?php do { ?>    
                     <tr style="text-align:left">
                       <td><?php echo $a++;?></td>
-                      <td><a data-toggle="modal" data-target="#editStaffModal" data-whatever1="<?php echo $row_station['id'];?>" class="badge badge-light" role="button" aria-pressed="true"><?php echo ucwords(strtolower($row_station['nama']));?></a>
+                      <td><a data-toggle="modal" data-target="#editStaffModal" data-whatever1="<?php echo $login['id'];?>" class="badge badge-light" role="button" aria-pressed="true"><?php echo ucwords(strtolower($login['name']));?></a>
                       </td>
-                      <td><?php echo $row_station['noIC'];?></td>
-                      <td><?php echo $row_station['emel'];?></td>
-                      <td><?php echo $row_station['password'];?></td>
-                      <td><?php if($row_station['role'] =='rider'){echo '<h6>Rider</h6>';}elseif($row_station['role'] =='ss'){echo '<h6>Station Supervisor</h6>';}elseif($row_station['role'] =='Temp Riders'){echo '<h6>Temp Riders</h6>';}elseif($row_station['role'] =='Senior Courier'){echo '<h6>Senior Courier</h6>';}elseif($row_station['role'] =='dump'){echo '<h6>Re-assign</h6>';}else{echo 'Administrator';}?></td>
-                      <td><?php echo $row_station['name'];?></td>
-                      <td><?php echo $row_station['stationCode'];?></td>
+                      <td><?php echo $login['email'];?></td>
+                      <td><?php echo $login['username'];?></td>
+                      <td><?php echo $login['password'];?></td>
+                      <td><?php echo strtoupper($login['role']);?></td>
                       <td>
-                          <a data-toggle="modal" data-target="#deleteStaffModal" data-whatever2="<?php echo $row_station['noIC'];?>" class="badge badge-danger" role="button" aria-pressed="true" style="color:white">Del</a></td>
+                          <a data-toggle="modal" data-target="#deleteStaffModal" data-whatever2="<?php echo $login['noIC'];?>" class="badge badge-danger" role="button" aria-pressed="true" style="color:white">Del</a>
+                      </td>
                     </tr>
-                    <?php } while ($row_station = mysqli_fetch_assoc($station)); ?>
+                    <?php } while ($login = mysqli_fetch_assoc($loginD)); ?>
                     </tbody>
                   </table>
+                <?php }?>
             </div>
           </div>
           <!--under row//-->
@@ -465,8 +464,8 @@ if (isset($_POST['submit'])) {
   <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
-  <script src="plugins/datatables/jquery.dataTables.js"></script>
-  <script src="plugins/datatables/dataTables.bootstrap4.js"></script>
+  <script src="assets/datatables/jquery.dataTables.js"></script>
+  <script src="assets/datatables/dataTables.bootstrap4.js"></script>
   <script>
     $(function () {
       $("#example1").DataTable();
