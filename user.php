@@ -299,7 +299,7 @@ if (isset($_POST['submit'])) {
                     <tr style="text-align:left">
                       <th scope="col">No</th></th>
                       <th scope="col">Name</th></th>
-                      <th scope="col">Emailr</th>
+                      <th scope="col">Email</th>
                       <th scope="col">Username</th>
                       <th scope="col">Password</th>
                       <th scope="col">Role</th>
