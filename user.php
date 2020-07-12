@@ -199,18 +199,17 @@
                     </div>
                     <div class="row">
                       <div class="col-md-6">
-                        <div class="row">
-                          <div class="col-md-11">
                               <div class="form-group">
-                                <label class="bmd-label-floating">Password</label>
-                                <input type="password" class="form-control" id="txtPassword">
-                                <span onclick="togglePassword()" class="material-icons">visibility</span>
+                                <div class="input-group mb-3">
+                                    <label class="bmd-label-floating">Password</label>
+                                    <input type="password" class="form-control" id="txtPassword">
+                                    <div class="input-group-append input-group-text">
+                                          <span onclick="togglePassword()" class="material-icons">visibility</span>
+                                    </div>
+                                </div>
                               </div>
-                          </div>
-                          <div class="col-md-1">
-                              <span onclick="togglePassword()" class="material-icons">visibility</span>
-                          </div>
-                        </div>
+                      </div>
+                         
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
