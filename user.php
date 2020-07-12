@@ -31,11 +31,11 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $username = $_POST['username'];
 $password = $_POST['password'];
-$role = $_POST['role'];
+$role2 = $_POST['role'];
 $a = 1;
 
 if (isset($_POST['submit'])) {
-      $mysqli->query("INSERT INTO `login` (`name`, `email`, `username`, `password`, `role`) VALUES ('$name', '$email', '$username', '$password', '$role')");
+      $mysqli->query("INSERT INTO `login` (`name`, `email`, `username`, `password`, `role`) VALUES ('$name', '$email', '$username', '$password', '$role2')");
       header("location:user.php");
     }
 
