@@ -23,7 +23,7 @@ $role = $mysqli->query("SELECT * FROM role");
 $ED = mysqli_fetch_assoc($role);
 $totalRows_role = mysqli_num_rows($role);
 
-$loginD = $mysqli->query("SELECT * FROM loginD WHERE role NOT LIKE administrator AND role NOT LIKE superadmin");
+$loginD = $mysqli->query("SELECT * FROM login WHERE role NOT LIKE administrator AND role NOT LIKE superadmin");
 $login = mysqli_fetch_assoc($loginD);
 $totalRows_loginD = mysqli_num_rows($loginD);
 
