@@ -81,7 +81,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="tables.php">
+            <a class="nav-link" href="#">
               <i class="material-icons">content_paste</i>
               <p>Announcement Setting</p>
             </a>
