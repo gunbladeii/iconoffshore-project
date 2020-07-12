@@ -64,13 +64,13 @@ if ($_SESSION['role'] != 'administrator')
           <li class="nav-item ">
             <a class="nav-link" href="user.php">
               <i class="material-icons">person</i>
-              <p>User Profile</p>
+              <p>User Registration</p>
             </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="tables.php">
               <i class="material-icons">content_paste</i>
-              <p>Table List</p>
+              <p>Announcement Setting</p>
             </a>
           </li>
           <li class="nav-item ">
