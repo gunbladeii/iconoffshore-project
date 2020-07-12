@@ -182,7 +182,7 @@ md = {
       dataDailySalesChart = {
         labels: ['I', 'S', 'R', 'K', 'J', 'S', 'A'],
         series: [
-          [12, 17, 7, 17, 23, 18, 38]
+          [25, 30, 8, 35, 9, 10, 10]
         ]
       };
 
