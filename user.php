@@ -199,9 +199,11 @@
                     </div>
                     <div class="row">
                       <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Password</label>
-                          <input type="password" class="form-control" id="txtPassword">
+                        <div class="row">
+                          <div class="form-group">
+                            <label class="bmd-label-floating">Password</label>
+                            <input type="password" class="form-control" id="txtPassword">
+                          </div>
                           <i class="material-icons" onclick="togglePassword()">radio_button_unchecked</i>
                         </div>
                       </div>
