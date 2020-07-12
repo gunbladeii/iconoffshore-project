@@ -23,6 +23,22 @@ $role = $mysqli->query("SELECT * FROM role");
 $ED = mysqli_fetch_assoc($role);
 $totalRows_role = mysqli_num_rows($role);
 
+$loginD = $mysqli->query("SELECT * FROM loginD WHERE role NOT LIKE administrator AND role NOT LIKE superadmin");
+$login = mysqli_fetch_assoc($loginD);
+$totalRows_loginD = mysqli_num_rows($loginD);
+
+$name = $_POST['name'];
+$email = $_POST['email'];
+$username = $_POST['username'];
+$password = $_POST['password'];
+$role = $_POST['role'];
+
+if (isset($_POST['submit'])) {
+      $mysqli->query("INSERT INTO `login` (`name`, `email`, `username`, `password`, `role`) VALUES ('$name', '$email', '$username', '$password', '$role')");
+      
+      header("location:user.php");
+    }
+
 ?>
 <!--
 =========================================================
@@ -205,18 +221,18 @@ $totalRows_role = mysqli_num_rows($role);
                   <p class="card-category">Complete your profile</p>
                 </div>
                 <div class="card-body">
-                  <form>
+                  <form method="post" action="user.php" role="form" enctype="multipart/form-data">
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Username</label>
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" name="username">
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Email address</label>
-                          <input type="email" class="form-control">
+                          <input type="email" class="form-control" name="email">
                         </div>
                       </div>
                     </div>
@@ -225,7 +241,7 @@ $totalRows_role = mysqli_num_rows($role);
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Name</label>
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" name="name">
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -245,7 +261,7 @@ $totalRows_role = mysqli_num_rows($role);
                               <div class="form-group">
                                 <div class="input-group mb-3">
                                     <label class="bmd-label-floating">Password</label>
-                                    <input type="password" class="form-control" id="txtPassword">
+                                    <input type="password" class="form-control" id="txtPassword" name="password">
                                     <div class="input-group-append input-group-text">
                                           <span onclick="togglePassword()" class="material-icons">visibility</span>
                                     </div>
@@ -267,14 +283,51 @@ $totalRows_role = mysqli_num_rows($role);
                     </div>
                       <!--end row-->
 
-                    <button type="submit" class="btn btn-primary pull-right" onclick="return Validate()">Register</button>
+                    <button type="submit" name="submit" class="btn btn-primary pull-right" onclick="return Validate()">Register</button>
                     <div class="clearfix"></div>
                   </form>
                 </div>
               </div>
             </div>
-          <!--will insert later//-->
+          <!--under row//-->
           </div>
+          <div class="row">
+            <div class="col-md-12">
+                  <table id="example1" class="table table-hover table-responsive-xl">
+                    <thead class="table-info">
+                    <tr style="text-align:left">
+                      <th scope="col">No</th></th>
+                      <th scope="col">Name</th></th>
+                      <th scope="col">IC Number</th>
+                      <th scope="col">Emel/Username</th>
+                      <th scope="col">Password</th>
+                      <th scope="col">Role</th>
+                      <th scope="col">Station</th>
+                      <th scope="col">Code</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php do { ?>    
+                    <tr style="text-align:left">
+                      <td><?php echo $a++;?></td>
+                      <td><a data-toggle="modal" data-target="#editStaffModal" data-whatever1="<?php echo $row_station['id'];?>" class="badge badge-light" role="button" aria-pressed="true"><?php echo ucwords(strtolower($row_station['nama']));?></a>
+                      </td>
+                      <td><?php echo $row_station['noIC'];?></td>
+                      <td><?php echo $row_station['emel'];?></td>
+                      <td><?php echo $row_station['password'];?></td>
+                      <td><?php if($row_station['role'] =='rider'){echo '<h6>Rider</h6>';}elseif($row_station['role'] =='ss'){echo '<h6>Station Supervisor</h6>';}elseif($row_station['role'] =='Temp Riders'){echo '<h6>Temp Riders</h6>';}elseif($row_station['role'] =='Senior Courier'){echo '<h6>Senior Courier</h6>';}elseif($row_station['role'] =='dump'){echo '<h6>Re-assign</h6>';}else{echo 'Administrator';}?></td>
+                      <td><?php echo $row_station['name'];?></td>
+                      <td><?php echo $row_station['stationCode'];?></td>
+                      <td>
+                          <a data-toggle="modal" data-target="#deleteStaffModal" data-whatever2="<?php echo $row_station['noIC'];?>" class="badge badge-danger" role="button" aria-pressed="true" style="color:white">Del</a></td>
+                    </tr>
+                    <?php } while ($row_station = mysqli_fetch_assoc($station)); ?>
+                    </tbody>
+                  </table>
+            </div>
+          </div>
+          <!--under row//-->
         </div>
       </div>
       <footer class="footer">
@@ -412,6 +465,21 @@ $totalRows_role = mysqli_num_rows($role);
   <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
+  <script src="plugins/datatables/jquery.dataTables.js"></script>
+  <script src="plugins/datatables/dataTables.bootstrap4.js"></script>
+  <script>
+    $(function () {
+      $("#example1").DataTable();
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+      });
+    });
+  </script>
   <script>
     $(document).ready(function() {
       $().ready(function() {
