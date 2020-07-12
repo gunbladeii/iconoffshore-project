@@ -200,7 +200,7 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="row">
-                          <div class="col-md-10">
+                          <div class="col-md-12">
                               <div class="form-group">
                                 <label class="bmd-label-floating">Password</label>
                                 <input type="password" class="form-control" id="txtPassword">
