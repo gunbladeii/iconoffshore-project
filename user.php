@@ -230,11 +230,10 @@ $totalRows_role = mysqli_num_rows($role);
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Role</label>
                             <select name="role" class="custom-select browser-default" required>
                               <option value="" selected>Choose role</option>
                                <?php do {?>
-                               <option value="<?php echo $ED['role']?>"><?php echo strtoupper($ED['role'])?></option>
+                               <option value="<?php echo $ED['roleName']?>"><?php echo strtoupper($ED['roleName'])?></option>
                                <?php }while ($ED = mysqli_fetch_assoc($role))?>
                             </select>
                         </div>
