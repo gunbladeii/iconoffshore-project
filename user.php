@@ -295,7 +295,7 @@ if (isset($_POST['submit'])) {
             <div class="col-md-12">
                 <?php if ($totalRows_loginD > 0) { ?>
                   <table id="example1" class="table table-hover table-responsive-xl">
-                    <thead class="table-info">
+                    <thead class="table-primary">
                     <tr style="text-align:left">
                       <th scope="col">No</th></th>
                       <th scope="col">Name</th></th>
@@ -310,7 +310,7 @@ if (isset($_POST['submit'])) {
                     <?php do { ?>    
                     <tr style="text-align:left">
                       <td><?php echo $a++;?></td>
-                      <td><a data-toggle="modal" data-target="#editStaffModal" data-whatever1="<?php echo $login['id'];?>" class="badge badge-light" role="button" aria-pressed="true"><?php echo ucwords(strtolower($login['name']));?></a>
+                      <td><a data-toggle="modal" data-target="#editStaffModal" data-whatever1="<?php echo $login['id'];?>" class="badge badge-success" role="button" aria-pressed="true"><?php echo ucwords(strtolower($login['name']));?></a>
                       </td>
                       <td><?php echo $login['email'];?></td>
                       <td><?php echo $login['username'];?></td>
