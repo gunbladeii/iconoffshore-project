@@ -197,6 +197,7 @@
                         </div>
                       </div>
                     </div>
+
                     <div class="row">
                       <div class="col-md-6">
                               <div class="form-group">
@@ -211,11 +212,19 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Confirm Password</label>
-                          <input type="password" class="form-control" id="txtConfirmPassword">
-                        </div>
+                                <div class="input-group mb-3">
+                                    <label class="bmd-label-floating">Confirm Password</label>
+                                    <input type="password" class="form-control" id="txtConfirmPassword">
+                                    <div class="input-group-append input-group-text">
+                                          <span onclick="togglePasswordConfirmPassword()" class="material-icons">visibility</span>
+                                    </div>
+                                </div>
+                              </div>
                       </div>
+                      <!--end col-md-6-confirm-password-->
                     </div>
+                      <!--end row-->
+
                     <button type="submit" class="btn btn-primary pull-right" onclick="return Validate()">Register</button>
                     <div class="clearfix"></div>
                   </form>
@@ -271,6 +280,15 @@
 
           function togglePassword() {
             var x = document.getElementById("txtPassword");
+            if (x.type === "password") {
+              x.type = "text";
+            } else {
+              x.type = "password";
+            }
+          }
+
+          function togglePasswordConfirmPassword() {
+            var x = document.getElementById("txtConfirmPassword");
             if (x.type === "password") {
               x.type = "text";
             } else {
