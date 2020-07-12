@@ -200,13 +200,13 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="row">
-                          <div class="col-md-12">
+                          <div class="col-md-11">
                               <div class="form-group">
                                 <label class="bmd-label-floating">Password</label>
                                 <input type="password" class="form-control" id="txtPassword">
                               </div>
                           </div>
-                          <div class="col-md-2">
+                          <div class="col-md-1">
                               <i class="material-icons" onclick="togglePassword()">radio_button_unchecked</i>
                           </div>
                         </div>
