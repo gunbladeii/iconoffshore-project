@@ -86,6 +86,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               <p>Announcement Setting</p>
             </a>
           </li>
+          <!--
           <li class="nav-item ">
             <a class="nav-link" href="typography.php">
               <i class="material-icons">library_books</i>
@@ -110,7 +111,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               <p>Notifications</p>
             </a>
           </li>
-          <!-- <li class="nav-item active-pro ">
+          <li class="nav-item active-pro ">
                 <a class="nav-link" href="upgrade.php">
                     <i class="material-icons">unarchive</i>
                     <p>Upgrade to PRO</p>
