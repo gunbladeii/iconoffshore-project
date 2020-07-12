@@ -207,7 +207,7 @@
                               </div>
                           </div>
                           <div class="col-md-1">
-                              <i class="material-icons" onclick="togglePassword()">radio_button_unchecked</i>
+                              <i class="material-icons" onclick="togglePassword()">toggle_off</i>
                           </div>
                         </div>
                       </div>
