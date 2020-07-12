@@ -1,3 +1,29 @@
+<?php require('conn.php'); ?>
+<?php
+session_start();
+if ($_SESSION['role'] != 'administrator')
+{
+      header('Location:index.php');
+}
+
+date_default_timezone_set("asia/kuala_lumpur");
+$date = date('d-F-Y');
+$datePHP = date('Y-m-d');
+
+$colname_Recordset = "-1";
+if (isset($_SESSION['MM_Username'])) {
+  $colname_Recordset = $_SESSION['MM_Username'];
+}
+
+$Recordset = $mysqli->query("SELECT * FROM login WHERE username = '$colname_Recordset'");
+$row_Recordset = mysqli_fetch_assoc($Recordset);
+$totalRows_Recordset = mysqli_num_rows($Recordset);
+
+$role = $mysqli->query("SELECT * FROM role");
+$ED = mysqli_fetch_assoc($role);
+$totalRows_role = mysqli_num_rows($role);
+
+?>
 <!--
 =========================================================
 * Material Dashboard Dark Edition - v2.1.0
@@ -21,7 +47,7 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Material Dashboard Dark Edition by Icon Offshore
+    User Registration
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -104,6 +130,8 @@
         <div class="container-fluid">
           <div class="navbar-wrapper">
             <a class="navbar-brand" href="javascript:void(0)">User Profile</a>
+             <span class="badge badge-primary">Hi, <?php echo ucfirst($row_Recordset['name']);?></span>&nbsp
+             <span class="badge badge-info">Role: <?php echo strtoupper($row_Recordset['role']);?></span>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
@@ -192,17 +220,23 @@
                         </div>
                       </div>
                     </div>
+
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Fist Name</label>
+                          <label class="bmd-label-floating">Name</label>
                           <input type="text" class="form-control">
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Last Name</label>
-                          <input type="text" class="form-control">
+                          <label class="bmd-label-floating">Role</label>
+                            <select name="role" class="custom-select browser-default" required>
+                              <option value="" selected>Choose role</option>
+                               <?php do {?>
+                               <option value="<?php echo $ED['role']?>"><?php echo strtoupper($ED['role'])?></option>
+                               <?php }while ($ED = mysqli_fetch_assoc($role))?>
+                            </select>
                         </div>
                       </div>
                     </div>
