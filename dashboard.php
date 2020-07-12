@@ -66,7 +66,6 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
       <div class="logo"><a href="https://iconvessel.com/icon" class="simple-text logo-normal">
           <img src="assets/img/apple-icon.png" class="img-thumbnail img-fluid">
         </a></div>
-        <span class="badge badge-success"><?php echo ucfirst($row_Recordset['username']);?></span>
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
@@ -126,6 +125,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
         <div class="container-fluid">
           <div class="navbar-wrapper">
             <a class="navbar-brand" href="javascript:void(0)">Dashboard</a>
+             <span class="badge badge-success"><?php echo ucfirst($row_Recordset['username']);?></span>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
