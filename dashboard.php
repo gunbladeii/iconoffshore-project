@@ -125,7 +125,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
         <div class="container-fluid">
           <div class="navbar-wrapper">
             <a class="navbar-brand" href="javascript:void(0)">Dashboard</a>
-             <span class="badge badge-primary">Hi, <?php echo ucfirst($row_Recordset['name']);?></span>
+             <span class="badge badge-primary">Hi, <?php echo ucfirst($row_Recordset['name']);?></span>&nbsp
              <span class="badge badge-info">Role: <?php echo strtoupper($row_Recordset['role']);?></span>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
