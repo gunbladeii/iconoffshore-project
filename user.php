@@ -153,6 +153,14 @@
                   </p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="logout.php">
+                  <i class="material-icons">exit_to_app</i>
+                  <p class="d-lg-none d-md-block">
+                   Logout
+                  </p>
+                </a>
+              </li>
             </ul>
           </div>
         </div>

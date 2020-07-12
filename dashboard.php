@@ -166,7 +166,7 @@ if ($_SESSION['role'] != 'administrator')
                 <a class="nav-link" href="logout.php">
                   <i class="material-icons">exit_to_app</i>
                   <p class="d-lg-none d-md-block">
-                    Account
+                   Logout
                   </p>
                 </a>
               </li>
