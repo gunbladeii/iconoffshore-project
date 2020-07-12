@@ -201,14 +201,14 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Password</label>
-                          <input type="text" class="form-control" id="txtPassword">
+                          <input type="password" class="form-control" id="txtPassword">
                           <i class="material-icons" onclick="togglePassword()">radio_button_unchecked</i>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Confirm Password</label>
-                          <input type="text" class="form-control" id="txtConfirmPassword">
+                          <input type="password" class="form-control" id="txtConfirmPassword">
                         </div>
                       </div>
                     </div>
