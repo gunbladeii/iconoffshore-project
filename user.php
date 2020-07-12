@@ -204,6 +204,7 @@
                               <div class="form-group">
                                 <label class="bmd-label-floating">Password</label>
                                 <input type="password" class="form-control" id="txtPassword">
+                                <span onclick="togglePassword()" class="material-icons">visibility</span>
                               </div>
                           </div>
                           <div class="col-md-1">
