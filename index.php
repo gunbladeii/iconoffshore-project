@@ -42,7 +42,7 @@ session_start();
                 $msg = "Invalid Username or Password";
             }
         
-            if($res["role"] == "administrator")
+            if($res["role"] == "superadmin")
             {
                 $_SESSION['MM_Username'] = $res['username'];
                 $_SESSION['role'] = $res["role"];
