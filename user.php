@@ -202,6 +202,7 @@
                         <div class="form-group">
                           <label class="bmd-label-floating">Password</label>
                           <input type="text" class="form-control" id="txtPassword">
+                          <i class="material-icons" onclick="togglePassword()">radio_button_unchecked</i>
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -262,6 +263,15 @@
                   return false;
               }
               return true;
+          }
+
+          function togglePassword() {
+            var x = document.getElementById("txtPassword");
+            if (x.type === "password") {
+              x.type = "text";
+            } else {
+              x.type = "password";
+            }
           }
       </script>
       <script>
