@@ -240,22 +240,22 @@
           <nav class="float-left">
             <ul>
               <li>
-                <a href="https://www.creative-tim.com">
+                <a href="https://iconvessel.com/icon">
                   Icon Offshore
                 </a>
               </li>
               <li>
-                <a href="https://creative-tim.com/presentation">
+                <a href="https://iconvessel.com/icon">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="http://blog.creative-tim.com">
-                  Blog
+                <a href="https://iconvessel.com/icon">
+                  Team
                 </a>
               </li>
               <li>
-                <a href="https://www.creative-tim.com/license">
+                <a href="https://iconvessel.com/icon">
                   Licenses
                 </a>
               </li>
@@ -263,7 +263,7 @@
           </nav>
           <div class="copyright float-right" id="date">
             , made with <i class="material-icons">favorite</i> by
-            <a href="https://www.creative-tim.com" target="_blank">Icon Offshore</a> for a better web.
+            <a href="https://iconvessel.com/icon" target="_blank">Icon Offshore</a>.
           </div>
         </div>
       </footer>

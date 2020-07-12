@@ -590,27 +590,27 @@ if ($_SESSION['role'] != 'administrator')
           </div>
         </div>
       </div>
-      <footer class="footer">
+       <footer class="footer">
         <div class="container-fluid">
           <nav class="float-left">
             <ul>
               <li>
-                <a href="#">
+                <a href="https://iconvessel.com/icon">
                   Icon Offshore
                 </a>
               </li>
               <li>
-                <a href="https://creative-tim.com/presentation">
+                <a href="https://iconvessel.com/icon">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="http://blog.creative-tim.com">
-                  Blog
+                <a href="https://iconvessel.com/icon">
+                  Team
                 </a>
               </li>
               <li>
-                <a href="#/license">
+                <a href="https://iconvessel.com/icon">
                   Licenses
                 </a>
               </li>
@@ -618,7 +618,7 @@ if ($_SESSION['role'] != 'administrator')
           </nav>
           <div class="copyright float-right" id="date">
             , made with <i class="material-icons">favorite</i> by
-            <a href="#" target="_blank">Icon Offshore</a> for a better web.
+            <a href="https://iconvessel.com/icon" target="_blank">Icon Offshore</a>.
           </div>
         </div>
       </footer>
